@@ -21,9 +21,40 @@ const oathswornImages = [
   'assets/BG_Oathsworn/Oathsworn_Boss_1.jpg',
 ];
 
+const warhammer40KImages = [
+  'assets/WH_40K_fighting_scenario/Warhammer_40K_fighting.jpg',
+  'assets/WH_40K_fighting_scenario/NMM_Captain.jpg',
+  'assets/WH_40K_fighting_scenario/Squad_Overview_1.jpg',
+  'assets/WH_40K_fighting_scenario/Squad_Overview_2.jpg',
+];
+
+const LixillboxNurgleImages = [
+  'assets/WH_Lixillbox_Nurgle/Nurgle_Team_1.jpg',
+  'assets/WH_Lixillbox_Nurgle/Nurgle_Team_2.jpg',
+  'assets/WH_Lixillbox_Nurgle/Nurgle_Team_3.jpg',
+  'assets/WH_Lixillbox_Nurgle/Nurgle_Team_4.jpg',
+  'assets/WH_Lixillbox_Nurgle/Nurgle_Team_5.jpg',
+  'assets/WH_Lixillbox_Nurgle/Nurgle_Team_6.jpg',
+  'assets/WH_Lixillbox_Nurgle/Nurgle_Team_7.jpg',
+  'assets/WH_Lixillbox_Nurgle/Nurgle_Team_8.jpg',
+  'assets/WH_Lixillbox_Nurgle/Nurgle_Team_9.jpg',
+  'assets/WH_Lixillbox_Nurgle/Nurgle_Captain.jpg',
+];
+
+const LixillboxKriegImages = [
+  'assets/WH_Lixillbox_Krieg/Krieg_Team_1.jpg',
+  'assets/WH_Lixillbox_Krieg/Krieg_Team_2.jpg',
+  'assets/WH_Lixillbox_Krieg/Krieg_Team_3.jpg',
+  'assets/WH_Lixillbox_Krieg/Krieg_Team_4.jpg',
+  'assets/WH_Lixillbox_Krieg/Box_Grey_Command_1_4.png',
+];
+
 const galleryImages = {
   'dune-imperium': duneImperiumImages,
   'oathsworn': oathswornImages,
+  'warhammer-40k': warhammer40KImages,
+  'Lixillbox-Nurgle': LixillboxNurgleImages,
+  'Lixillbox-Krieg': LixillboxKriegImages,
 };
 
 let lightboxImages = [];
