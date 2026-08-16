@@ -59,6 +59,9 @@ const galleryImages = {
 
 let lightboxImages = [];
 let lightboxIndex = 0;
+let touchStartX = 0;
+let touchEndX = 0;
+const swipeThreshold = 50;
 
 function openLightbox(images, index = 0) {
   if (!images || !images.length) {
@@ -90,6 +93,25 @@ function showLightboxSlide(offset) {
   lightboxCaption.textContent = `${lightboxIndex + 1} / ${lightboxImages.length}`;
 }
 
+function handleTouchStart(event) {
+  touchStartX = event.changedTouches[0].screenX;
+}
+
+function handleTouchEnd(event) {
+  touchEndX = event.changedTouches[0].screenX;
+  const deltaX = touchEndX - touchStartX;
+
+  if (Math.abs(deltaX) < swipeThreshold) {
+    return;
+  }
+
+  if (deltaX < 0) {
+    showLightboxSlide(1);
+  } else {
+    showLightboxSlide(-1);
+  }
+}
+
 closeButton.addEventListener('click', closeLightbox);
 prevButton.addEventListener('click', () => showLightboxSlide(-1));
 nextButton.addEventListener('click', () => showLightboxSlide(1));
@@ -117,6 +139,9 @@ document.addEventListener('keydown', (event) => {
     showLightboxSlide(1);
   }
 });
+
+lightboxImage.addEventListener('touchstart', handleTouchStart, { passive: true });
+lightboxImage.addEventListener('touchend', handleTouchEnd, { passive: true });
 
 document.querySelectorAll('.lightbox-trigger').forEach((trigger) => {
   trigger.addEventListener('click', (event) => {
