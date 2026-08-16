@@ -39,12 +39,12 @@
     <section class="gallery">
       <h2>作品展示 Featured Works</h2>
       <div class="gallery-grid">
-        <a class="gallery-card lightbox-trigger" style="background-image: url('assets/BG_Dune_Imperium/Dune_Imperium_Demo.jpg');" href="#" data-gallery="dune-imperium" onclick="openLightbox(event, 'dune-imperium', ['assets/BG_Dune_Imperium/Dune_Imperium_Demo.jpg', 'assets/BG_Dune_Imperium/Lady Jessica_Bene Gesserit Sisters.jpg', 'assets/BG_Dune_Imperium/Liet-Kynes_Fremen-Troops.jpg', 'assets/BG_Dune_Imperium/Mentat_2.jpg', 'assets/BG_Dune_Imperium/Sardaukar troops_1.jpg'])">
+        <a class="gallery-card lightbox-trigger" style="background-image: url('assets/BG_Dune_Imperium/Dune_Imperium_Demo.jpg');" href="#" data-gallery="dune-imperium" rel="noopener noreferrer">
           <h3>桌游《沙丘：帝国》</h3>
           <p>Dune: Imperium the Board Game</p>
         </a>
-        
-        <a class="gallery-card" style="background-image: url('assets/Oathsworn_Boss_1.jpg');" href="assets/Oathsworn_Boss_1.jpg" target="_blank" rel="noopener noreferrer">
+
+        <a class="gallery-card lightbox-trigger" style="background-image: url('assets/BG_Oathsworn/Oathsworn_Boss_1.jpg');" href="#" data-gallery="oathsworn" rel="noopener noreferrer">
           <h3>桌游《守誓者》</h3>
           <p>Oathsworn the Board Game</p>
         </a>
@@ -86,5 +86,17 @@
       <p>Studio Lituntun presents hands-on painting craftsmanship.</p>
       <p>Every piece is created with care, detail, and a personal artistic touch.</p>
     </section>
+
+    <div id="lightbox-modal" class="lightbox-modal" aria-hidden="true">
+      <button class="lightbox-close" type="button" aria-label="Close">×</button>
+      <button class="lightbox-arrow lightbox-prev" type="button" aria-label="Previous image">‹</button>
+      <div class="lightbox-content">
+        <img id="lightbox-image" src="" alt="Gallery view" />
+        <div id="lightbox-caption" class="lightbox-caption"></div>
+      </div>
+      <button class="lightbox-arrow lightbox-next" type="button" aria-label="Next image">›</button>
+    </div>
+
+    <script src="script.js" defer></script>
   </body>
 </html>
